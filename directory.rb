@@ -1,11 +1,13 @@
 students = [
-	"terrence coverly",
-	'allan dicarra',
-	"oboe today",
-	"billy baldwin",
+	{:name => "terrence coverly", :cohort => :november},
+	{:name => "allan dicarra", :cohort => :november},
+	{:name => "oboe today", :cohort => :november},
+	{:name => "billy baldwin", :cohort => :november}
 ]
-puts "here is a list of names"
+def print(students)
 students.each do |student|
-	puts student
+	puts "#{student[:name]} (#{student[:cohort]} cohort)"
+	end
 end
-puts "total is #{students.length}, donezo"
+print(students)
+#puts "total is #{students.length}, donezo"
