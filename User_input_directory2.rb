@@ -67,4 +67,5 @@ students = input_students
 print(students)
 puts ''
 sleep(1)
+print_sorted(names)
 print_footer(students)
