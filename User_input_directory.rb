@@ -1,16 +1,39 @@
+
+qstudents = [
+	{name:  "Terrence Coverly", cohort:  :november},
+	{name:  "Allan Dicarra", cohort:  :november},
+	{name:  "Oboe Today", cohort:  :november},
+	{name:  "Billy Baldwin", cohort:  :november}
+]
+puts "These people have just joined MA"
+sleep(1)
+def print(qstudents)
+qstudents.each_with_index do |qstudent, i |
+	puts "#{i + 1}" "\ " "#{qstudent[:name]} (#{qstudent[:cohort]} cohort)"
+	sleep(1)
+	end
+end
+print(qstudents)
+puts "There are #{qstudents.length} students"
+sleep(2)
+
 def print_header
-  puts "The students of my cohort at Makers Academy"
-  puts "-------------"
+  puts "What do you mean these people aren't at MA?"
+  sleep(1)
+  puts "Who is then?"
+  sleep(1)
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  students.each_with_index do |student, i|
+    puts "#{i + 1}" "\ " "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
+print_header
+
 def print_footer(names)    
-  puts "Overall, we have #{names.length} great students"
+  puts "Now, there are #{names.length} students"
 end
 
 def input_students
@@ -27,6 +50,7 @@ def input_students
 end
 
 students = input_students
-print_header
 print(students)
+puts ''
+sleep(1)
 print_footer(students)
