@@ -5,9 +5,9 @@ students = [
 	{:name => "billy baldwin", :cohort => :november}
 ]
 def print(students)
-students.each do |student|
+students.capitalize.each do |student|
 	puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 print(students)
-#puts "total is #{students.length}, donezo"
+puts "total is #{students.length}, donezo"
